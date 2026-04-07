@@ -14,7 +14,7 @@ const Navbar = () => {
           <a href="#servicos" className="hover:text-primary transition-colors">Serviços</a>
           <a href="#nis2" className="hover:text-primary transition-colors">NIS2</a>
           <a
-            href="#servicos"
+            href="#contacto"
             className="px-5 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
           >
             Contacto
