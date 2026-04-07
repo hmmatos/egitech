@@ -10,6 +10,7 @@ const Footer = () => {
           <nav className="flex gap-6 text-sm">
             <a href="#servicos" className="hover:text-primary transition-colors">Serviços</a>
             <a href="#nis2" className="hover:text-primary transition-colors">NIS2</a>
+            <a href="#contacto" className="hover:text-primary transition-colors">Contacto</a>
           </nav>
         </div>
         <div className="mt-8 pt-8 border-t border-hero-muted/20 text-center text-xs">
