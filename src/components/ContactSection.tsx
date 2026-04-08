@@ -1,13 +1,35 @@
 import { useState } from "react";
-import { Send } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
+
+const FORMSUBMIT_URL = "https://formsubmit.co/ajax/hmmatos@gmail.com";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    try {
+      await fetch(FORMSUBMIT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          _subject: `Nova mensagem de contacto de ${form.name}`,
+          _autoresponse: "Obrigado pelo seu contacto! A sua mensagem foi recebida com sucesso. Irá ser contactado brevemente pela nossa equipa. Cumprimentos, egitech",
+          _template: "table",
+        }),
+      });
+      setSubmitted(true);
+    } catch {
+      alert("Erro ao enviar a mensagem. Tente novamente.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -82,10 +104,11 @@ const ContactSection = () => {
             </div>
             <button
               type="submit"
-              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
+              disabled={loading}
+              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity disabled:opacity-60"
             >
-              <Send className="w-4 h-4" />
-              Enviar mensagem
+              {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
+              {loading ? "A enviar..." : "Enviar mensagem"}
             </button>
           </form>
         )}
