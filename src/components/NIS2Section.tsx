@@ -19,7 +19,7 @@ const NIS2Section = () => {
               A diretiva NIS2 da União Europeia exige que organizações em setores críticos implementem medidas robustas de cibersegurança. Ajudamos a sua organização a cumprir todos os requisitos — desde a avaliação de risco até à implementação técnica.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Com as nossas soluções open source, garantimos conformidade total sem dependência de fornecedores proprietários, mantendo controlo total sobre a sua infraestrutura.
+              Com as nossas soluções, garantimos conformidade total sem dependência de fornecedores proprietários, mantendo controlo total sobre a sua infraestrutura.
             </p>
           </div>
         </div>
