@@ -21,7 +21,7 @@ const HeroSection = () => {
           <span className="text-primary">sem compromissos.</span>
         </h1>
         <p className="text-lg md:text-xl text-hero-muted max-w-2xl mx-auto mb-10 leading-relaxed">
-          Serviços de informática, técnicos e consultadoria. Implementamos e gerimos a sua infraestrutura com soluções open source de referência.
+          Serviços de informática, técnicos e consultadoria. Implementamos e gerimos a sua infraestrutura com soluções de referência.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
