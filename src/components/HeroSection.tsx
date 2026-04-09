@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-hero/80 via-hero/60 to-hero" />
       <div className="relative z-10 container max-w-4xl mx-auto px-6 text-center">
         <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-6 animate-fade-in">
-          <!--- Evangelistas do Open Source -->
+          <!-- Evangelistas do Open Source -->
         </p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-hero-foreground leading-tight mb-6">
           Infraestrutura segura,
